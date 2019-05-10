@@ -3,7 +3,7 @@
     "displayName": "Cobalt2-pydemia",
     "description": "cobalt2-pydemia",
     "publisher": "pydemia",
-    "version": "7.0.0",
+    "version": "8.4.0",
     "engines": {
         "vscode": "^1.33.0"
     },
@@ -18,5 +18,9 @@
                 "path": "./themes/Cobalt2-pydemia-color-theme.json"
             }
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pydemia/pydemia-vscode-syntax.git"
     }
 }

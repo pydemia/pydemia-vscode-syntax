@@ -72,7 +72,7 @@
 			</dict>
 		</dict>
 		<dict>
-			<!-- Python: ['%s'] -->
+			<!-- Python: ['%s'] #2AFFDF -->
 			<key>name</key>
 			<string>User-defined constant</string>
 			<key>scope</key>
@@ -80,7 +80,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#2AFFDF</string>
+				<string>#2782FF</string>
 			</dict>
 		</dict>
 		<dict>
@@ -272,14 +272,6 @@
 				<string>#7DD961</string>
 			</dict>
 		</dict>
-		{
-			"name": "Markup Inline",
-			"scope": "markup.inline.raw",
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#FD971F"
-			}
-		},
 		<dict>
 			<key>name</key>
 			<string>Markup Inline</string>
