@@ -1,0 +1,22 @@
+{
+    "name": "cobalt2-pydemia",
+    "displayName": "Cobalt2-pydemia",
+    "description": "cobalt2-pydemia",
+    "publisher": "pydemia",
+    "version": "7.0.0",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Cobalt2-pydemia",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Cobalt2-pydemia-color-theme.json"
+            }
+        ]
+    }
+}
