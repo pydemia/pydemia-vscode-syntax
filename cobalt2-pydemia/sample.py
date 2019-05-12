@@ -54,6 +54,22 @@ _transpose_batch_time = decoder._transpose_batch_time  # pylint: disable=protect
 # categorical_sample) mimic TensorFlow Probability distribution semantics.
 
 
+def replace_str(s):
+    s = re.sub(r'[(re:)(FW:)]+', r'', s, flags=re.IGNORECASE)
+    s = re.sub(r'40(.*)41', r'(\1)', s)
+    s = re.sub(r'39(.*)', r'`\1', s)
+    s = re.sub(r'\t|\a', r' ', s)
+    s = re.sub(r'\r\n|\r', r'\n', s)
+    s = re.sub(r'http\S+', '', s)
+    s = re.sub(r'\[answer\]|\[notice\]|\[mia\D*\]', r'', s)
+    s = re.sub(r'\(\?\)', r' ', s)
+    s = re.sub(r'[▷◇△▲▽▼★]', r' ', s)
+    s = re.sub(r'[<]*[-=]{2,}[>]*', r' ', s)
+    s = re.sub(r'^(.+)([\s]*[(From)(Sent)]: .+Subject:)(.+)', repl, s, flags=re.IGNORECASE)
+    s = normalize('NFKD', s)
+    return s
+
+
 def _call_sampler(sample_n_fn, sample_shape, name=None):
   """Reshapes vector of samples."""
   with ops.name_scope(name, "call_sampler", values=[sample_shape]):
@@ -697,6 +713,7 @@ class InferenceHelper(Helper):
         the next batch of inputs. If not provided, `sample_ids` is used as the
         next batch of inputs.
     """
+    assert sample_fn is not None
     self._sample_fn = sample_fn
     self._end_fn = end_fn
     self._sample_shape = tensor_shape.TensorShape(sample_shape)

@@ -9,8 +9,8 @@
 		<dict>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#072539</string>
+				<!-- <key>background</key>
+				<string>#072539</string> -->
 				<key>caret</key>
 				<string>#E8E8E1</string>
 				<key>foreground</key>
@@ -40,7 +40,7 @@
 			<key>name</key>
 			<string>String</string>
 			<key>scope</key>
-			<string>string</string>
+			<string>string, storage.type.string, punctuation.definition.string</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -49,6 +49,7 @@
 		</dict>
 		<dict>
 			<!-- Python: [1, 128, 1_024] -->
+
 			<key>name</key>
 			<string>Number</string>
 			<key>scope</key>
@@ -76,11 +77,12 @@
 			<key>name</key>
 			<string>User-defined constant</string>
 			<key>scope</key>
-			<string>constant.character, constant.other</string>
+			<!-- <string>constant.character, constant.other</string> -->
+			<string>constant.character</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#2782FF</string>
+				<string>#06a6a8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -109,6 +111,7 @@
 				<string>bold</string>
 				<key>foreground</key>
 				<string>#FF9D00</string>
+				<!-- <string>#F92672</string> -->
 			</dict>
 		</dict>
 		<dict>
@@ -136,6 +139,7 @@
 				<string>italic bold</string>
 				<key>foreground</key>
 				<string>#FF9D00</string>
+				<!-- <string>#F92672</string> -->
 			</dict>
 		</dict>
 		<dict>
@@ -159,9 +163,9 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>italic bold underline</string>
+				<string>italic bold</string>
 				<key>foreground</key>
-				<string>#00B4FF</string>
+				<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
@@ -188,7 +192,8 @@
 				<key>fontStyle</key>
 				<string>italic</string>
 				<key>foreground</key>
-				<string>#f68d82</string>
+				<!-- <string>#f68d82</string> -->
+				<string>#f4aba4</string>
 			</dict>
 		</dict>
 		<dict>
@@ -199,10 +204,12 @@
 			<string>entity.name.tag</string>
 			<key>settings</key>
 			<dict>
+				<key>background</key>
+				<string>#4FFFF8</string>
 				<key>fontStyle</key>
-				<string></string>
+				<string>bold underline</string>
 				<key>foreground</key>
-				<string>#1f4662</string>
+				<string>#4FFFF8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -248,9 +255,10 @@
 		<dict>
 			<!-- Python: [@property, type, str, etc.] -->
 			<key>name</key>
-			<string>Library class/type</string>
+			<string>Library class</string>
 			<key>scope</key>
-			<string>support.type, support.class</string>
+			<!-- <string>support.type, support.class</string> -->
+			<string>support.class</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -270,21 +278,6 @@
 				<string></string>
 				<key>foreground</key>
 				<string>#7DD961</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Markup Inline</string>
-			<key>scope</key>
-			<string>markup.inline.raw</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string></string>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#F8F8F8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -367,8 +360,357 @@
 				<string>#E6DB74</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>constant.numeric.line-number.find-in-files - match</string>
+			<key>scope</key>
+			<string>constant.numeric.line-number.find-in-files - match</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#AE81FFA0</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>entity.name.filename.find-in-files</string>
+			<key>scope</key>
+			<string>entity.name.filename.find-in-files</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#E6DB74</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Quote</string>
+			<key>scope</key>
+			<string>markup.quote</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Lists</string>
+			<key>scope</key>
+			<string>markup.list</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#E6DB74</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Styling</string>
+			<key>scope</key>
+			<string>markup.bold, markup.italic</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#66D9EF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Inline</string>
+			<key>scope</key>
+			<string>markup.inline.raw</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Headings</string>
+			<key>scope</key>
+			<string>markup.heading</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup Setext Header</string>
+			<key>scope</key>
+			<string>markup.heading.setext</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A6E22E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>token.info-token</string>
+			<key>scope</key>
+			<string>token.info-token</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6796e6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>token.warn-token</string>
+			<key>scope</key>
+			<string>token.warn-token</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#cd9731</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>token.error-token</string>
+			<key>scope</key>
+			<string>token.error-token</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#f44747</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>token.debug-token</string>
+			<key>scope</key>
+			<string>token.debug-token</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#b267e6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>this.self</string>
+			<key>scope</key>
+			<string>variable.language</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#FD971F</string>
+			</dict>
+		</dict>
+		<!-- Python Specific -->
+		<dict>
+			<key>name</key>
+			<string>function.lambda</string>
+			<key>scope</key>
+			<string>storage.type.function.lambda, meta.lambda-function</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string>italic bold</string>
+				<key>foreground</key>
+				<string>#FF9D00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>function.lambda.paremeters</string>
+			<key>scope</key>
+			<string>meta.function.lambda.parameters</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string>italic bold</string>
+				<key>foreground</key>
+				<string>#f68d82</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>variable.language.special.self.python</string>
+			<key>scope</key>
+			<string>variable.parameter.function.language.special.self.python, variable.language.special.self.python</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#4FFFF8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>entity.name.function.decorator.python</string>
+			<key>scope</key>
+			<string>punctuation.definition.decorator.python, entity.name.function.decorator.python, meta.function.decorator.python</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#F92672</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>support.function.magic.python</string>
+			<key>scope</key>
+			<string>support.function.magic.python</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string></string>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ff9d00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>meta.function-call.generic.python</string>
+			<key>scope</key>
+			<string>meta.function-call.generic.python</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ffc600</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>support.function.builtin</string>
+			<key>scope</key>
+			<string>support.function.builtin</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ff9d00</string>
+			</dict>
+		</dict>
+		<!-- <dict>
+			<key>name</key>
+			<string>meta.function-call.python</string>
+			<key>scope</key>
+			<string>meta.function-call.python</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ffc600</string>
+			</dict>
+		</dict> -->
+		<!-- <dict>
+			<key>name</key>
+			<string>meta.function-call.arguments.python</string>
+			<key>scope</key>
+			<string>meta.function-call.arguments.python</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F1F1F1</string>
+			</dict>
+		</dict> -->
+		<dict>
+			<key>name</key>
+			<string>entity.name.type.class.python</string>
+			<key>scope</key>
+			<string>entity.name.type.class.python</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+				<key>foreground</key>
+				<string>#ffc000</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>regexp</string>
+			<key>scope</key>
+			<string>keyword.operator.quantifier.regexp, constant.character.format.placeholder.other.python, constant.other.set.regexp, constant.character.set.regexp, constant.character.escape.regexp, keyword.operator.disjunction.regexp, support.other.match.end.regexp, entity.name.tag.backreference.regexp, entity.name.tag.backreference.regexp</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#06a6a8</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
-	<string>D8D5E82E-3D5B-46B5-B38E-8C841C21347D</string>
+	<string>2569d6bf-dc1e-4b18-bf9d-82be81e50da7</string>
 </dict>
 </plist>
