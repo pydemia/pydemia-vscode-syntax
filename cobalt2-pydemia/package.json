@@ -3,7 +3,7 @@
     "displayName": "Cobalt2-pydemia",
     "description": "cobalt2-pydemia",
     "publisher": "pydemia",
-    "version": "8.4.5",
+    "version": "8.6.0",
     "engines": {
         "vscode": "^1.33.0"
     },
