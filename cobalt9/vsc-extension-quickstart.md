@@ -26,3 +26,30 @@ To learn more about scopes and how they're used, check out the [color theme](htt
 
 * To start using your extension with Visual Studio Code copy it into the `<user home>/.vscode/extensions` folder and restart Code.
 * To share your extension with the world, read on https://code.visualstudio.com/docs about publishing an extension.
+
+
+---
+## Publishing Extensions
+
+```sh
+npm install -g vsce
+```
+
+<https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops>
+
+Go to <https://dev.azure.com/pydemia/>,
+Then create Personal Access Token:
+(Finally, scroll down the list of possible scopes until you find Marketplace and select Manage:)
+
+```sh
+cd cobalt9
+# vsce create-publisher pydemia
+vsce login pydemia
+#Personal Access Token for publisher 'pydemia': ****************************************************
+vsce package
+# DONE  Packaged: /mnt/hdc1/data/git/pydemia-vscode-syntax/cobalt9/cobalt9-1.3.0.vsix (16 files, 469.37KB)
+vsce publish
+#Publishing pydemia.cobalt9@1.3.0...
+# DONE  Published pydemia.cobalt9@1.3.0
+#Your extension will live at https://marketplace.visualstudio.com/items?itemName=pydemia.cobalt9 (might take a few minutes for it to show up).
+```

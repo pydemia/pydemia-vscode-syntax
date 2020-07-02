@@ -1,11 +1,11 @@
 # README
 
 ## Description
-Created by pydemia
+Created by `pydemia`.
 
-This is a custom-revised version, inspired by Cobalt2.
+This is a custom-revised version, inspired by `Cobalt2`.
 
 ## Example
-* ![Example](example.png)
+* ![Example](https://raw.githubusercontent.com/pydemia/pydemia-vscode-syntax/master/cobalt9/example.png)
 
 **Enjoy!**
