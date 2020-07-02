@@ -1,1 +1,0 @@
-# pydemia-vscode-syntax
